@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: var(--primary-color);
+}
+
+:root{
+    --primary-color: #e7e9d2 ;
+    --secondary-color: #333d29 ;
+    --tertiary-color: #582f0e ;
+    /* --quaternary-color: #7f4f24;
+    --quinary-color: #656d4a; */
+}
