@@ -5,6 +5,7 @@ import { IoMdClose } from "react-icons/io";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { MdArrowDropUp } from "react-icons/md";
 import Button from "../../Custom/Button/Button";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -12,7 +13,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="flex justify-around items-center fixed z-10 left-0 w-full p-2 rounded-full bg-[var(--primary-color)] top-10">
+        <div className="flex justify-around items-center fixed w-full z-10 left-0 top-10 p-2 rounded-full bg-[var(--primary-color)]">
             <div className="md:text-3xl text-xl flex justify-between z-50 lg:w-auto w-full items-center">
                 <div className="flex items-center gap-1 font-semibold">
                     <GiVanillaFlower />
@@ -25,10 +26,10 @@ const Navbar = () => {
                 </div>
             </div>
             <ul className="list-none hidden lg:flex gap-10 items-center">
-                <li className="relative group cursor-pointer hover:text-[var(--tertiary-color)]">
+               <Link to='/'> <li className="relative group cursor-pointer hover:text-[var(--tertiary-color)]">
                     Home
                     <span className="absolute bottom-0 left-0 w-0 border-b-2 border-[var(--tertiary-color)] transition-all duration-300 ease-in-out group-hover:w-full"></span>
-                </li>
+                </li></Link>
                 <li className="relative group cursor-pointer hover:text-[var(--tertiary-color)]">
                     Need Volunteer
                     <span className="absolute bottom-0 left-0 w-0 border-b-2 border-[var(--tertiary-color)] transition-all duration-300 ease-in-out group-hover:w-full"></span>
@@ -63,7 +64,7 @@ const Navbar = () => {
                 </li>
             </ul>
             <div className="hidden lg:flex gap-2">
-                <button className="border border-[var(--secondary-color)] hover:bg-[var(--tertiary-color)] hover:text-white px-2 py-1 rounded-md">Sign In</button>
+            <Link to='/login'><button className="border border-[var(--secondary-color)] hover:bg-[var(--tertiary-color)] hover:text-white px-2 py-1 rounded-md">Sign In</button></Link>
                 <Button title='Request Demo'></Button>
             </div>
 
@@ -102,7 +103,7 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </li>
-                <button className="border border-[var(--secondary-color)] hover:bg-[var(--tertiary-color)] hover:text-white px-2 py-1 rounded-md">Sign In</button>
+                <Link to='/login'><button className="border border-[var(--secondary-color)] hover:bg-[var(--tertiary-color)] hover:text-white px-2 py-1 rounded-md">Sign In</button></Link>
                 <br />
                 <Button title='Request Demo'></Button>
             </ul>
